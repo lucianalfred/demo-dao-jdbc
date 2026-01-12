@@ -15,6 +15,14 @@ public class Seller implements Serializable{
 	private Date birthDate;
 	private Double baseSalary;
 	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	private Department department;
 	
 	public Seller() {
