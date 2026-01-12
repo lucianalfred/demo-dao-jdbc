@@ -5,8 +5,13 @@ import java.util.Date;
 import java.util.Objects;
 
 public class Seller implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer id;
 	private String name;
+	private String email;
 	private Date birthDate;
 	private Double baseSalary;
 	
@@ -16,10 +21,11 @@ public class Seller implements Serializable{
 		
 	}
 
-	public Seller(Integer id, String name, Date birthDate, Double baseSalary, Department department) {
+	public Seller(Integer id, String name,String email, Date birthDate, Double baseSalary, Department department) {
 		super();
 		this.id = id;
 		this.name = name;
+		this.email = email;
 		this.birthDate = birthDate;
 		this.baseSalary = baseSalary;
 		this.department = department;
