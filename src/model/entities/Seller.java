@@ -29,14 +29,25 @@ public class Seller implements Serializable{
 		
 	}
 
-	public Seller(Integer id, String name,String email, Date birthDate, Double baseSalary, Department department) {
+	public Seller(Integer id, String name,String email, java.util.Date date, Double baseSalary, Department department) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
-		this.birthDate = birthDate;
+		this.birthDate = date;
 		this.baseSalary = baseSalary;
 		this.department = department;
+	}
+
+	public Seller(Object id2, String name2, String email2, java.util.Date date, double baseSalary2,
+		Department department2) {
+		super();
+		this.name = name2;
+		this.email = email2;
+		this.birthDate = date;
+		this.baseSalary = baseSalary2;
+		this.department = department2;
+		
 	}
 
 	public Integer getId() {
