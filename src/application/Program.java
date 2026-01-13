@@ -20,10 +20,18 @@ public class Program {
 		System.out.println(seller);
 		System.out.println("=================================");
 		
-		System.out.println("====Test 2=======================");
+		System.out.println("====Test 2: findByDepartment=======================");
 		Department department = new Department(4, null);
 		List<Seller> list = sellerDao.findByDepartment(department);
 		
+		System.out.println("Total Sellers: "+list.size());
+		for(Seller obj: list) {
+			System.out.println(obj);
+		}
+		System.out.println("=================================");
+		
+		System.out.println("====Test 3:findAll=======================");
+		list = sellerDao.findAll();
 		System.out.println("Total Sellers: "+list.size());
 		for(Seller obj: list) {
 			System.out.println(obj);
