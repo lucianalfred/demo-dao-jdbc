@@ -41,10 +41,19 @@ public class Program {
 		
 		System.out.println("====Test 4:seller insert=======================");
 		
-		Seller newSeller  = new Seller(null, "Banana Joe", "joeThebananag@gmail.com", new Date(), 4000.0, department);
+		/*Seller newSeller  = new Seller(null, "Banana Joe", "joeThebananag@gmail.com", new Date(), 4000.0, department);
 		sellerDao.insert(newSeller);
 		System.out.println("Inseted new id = "+newSeller.getId());
+		
+		*/
 		System.out.println("=================================");
+		
+        System.out.println("====Test 5:seller update=======================");
+        seller = sellerDao.findById(7);
+		seller.setName("Luciano Alfredo");
+		sellerDao.update(seller);
+		System.out.println("Updated completed");
+        System.out.println("=================================");
 	
 	}
 }
