@@ -85,7 +85,7 @@ public class SellerDaoJDBC implements SellerDao {
         }finally {
         	DB.closeResult(rs);
         	DB.closeStatement(st);
-        	DB.closeConnection();
+        	
         }
     }
     
@@ -114,7 +114,7 @@ public class SellerDaoJDBC implements SellerDao {
 	        	
 	        	List<Seller> list = new ArrayList<>();
 	        	Map<Integer, Department> map = new HashMap<>();
-	        	if(rs.next()) {
+	        	while(rs.next()) {
 	        		Department dep = map.get(rs.getInt("DepartmentId"));
 	        		
 	        		if (dep == null) {
@@ -132,7 +132,7 @@ public class SellerDaoJDBC implements SellerDao {
 	        }finally {
 	        	DB.closeResult(rs);
 	        	DB.closeStatement(st);
-	        	DB.closeConnection();
+	        	
 	        }
 	}
 }
